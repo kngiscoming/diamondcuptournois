@@ -1,0 +1,528 @@
+<html><head><base href="index.html">
+    <title>Diamond Cup 2024 - 3ème édition | Tournoi de Football Elite à Abidjan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffd700;
+            --accent-color: #ffffff;
+            --text-color: #000000;
+            --bg-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--accent-color);
+            text-align: center;
+            padding: 1rem 1rem 0.5rem;
+            position: relative;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            background: var(--primary-color);
+            padding: 0.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .main-content {
+            background: var(--accent-color);
+            padding: 60px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--accent-color);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .highlight h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .countdown-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        .ambassadors {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        .ambassador-card {
+            width: 30%;
+            background: var(--bg-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .ambassador-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .ambassador-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .ambassador-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .ambassador-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .ambassador-role {
+            font-size: 1rem;
+            color: #666;
+        }
+        footer {
+            background: var(--primary-color);
+            color: var(--accent-color);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .gallery-image {
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .gallery-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .prize-info {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .stands {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .stand {
+            width: 30%;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .stand:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .stand h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .stand-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .stand-button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            nav ul {
+                flex-wrap: wrap;
+            }
+            nav ul li {
+                margin: 5px;
+            }
+            .countdown-item {
+                min-width: 70px;
+            }
+            .gallery-image {
+                width: 45%;
+            }
+            .ambassador-card {
+                width: 100%;
+            }
+            .stand {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Diamond Cup</div>
+        <p class="tagline">L'excellence du football à Abidjan</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#equipes">Équipes</a></li>
+            <li><a href="#stands">Stands</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="accueil">
+                <h1>Bienvenue à la 3ème édition de la Diamond Cup</h1>
+                
+                <div class="highlight">
+                    <h2>Le compte à rebours est lancé</h2>
+                    <p>🏆 Préparez-vous pour le tournoi de football le plus prestigieux d'Abidjan</p>
+                    <p>📍 Lieu : Terrain Urban Foot, Abidjan</p>
+                    <p>📅 Date : 19 juillet 2024</p>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Jours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Heures</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Secondes</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button" id="inscriptionBtn">Inscrivez votre équipe maintenant</a>
+                </div>
+                
+                <div class="prize-info">
+                    <p>Frais d'inscription : 50 000 FCFA par équipe</p>
+                    <p>Grand Prix pour l'équipe gagnante : 230 000 FCFA</p>
+                </div>
+            </section>
+
+            <section id="a-propos">
+                <h2>À propos de la Diamond Cup</h2>
+                <p>La Diamond Cup s'est imposée comme l'événement incontournable du football amateur en Côte d'Ivoire. Pour sa troisième édition, nous sommes fiers de vous accueillir sur le prestigieux terrain d'Urban Foot à Abidjan. Préparez-vous à vivre des moments defootball intenses, des performances exceptionnelles et une ambiance électrisante !</p>
+            </section>
+
+            <section id="programme">
+                <h2>Programme des festivités</h2>
+                <ul>
+                    <li>Cérémonie d'ouverture avec show artistique</li>
+                    <li>Phase de groupes palpitante</li>
+                    <li>Quarts de finale sous haute tension</li>
+                    <li>Demi-finales spectaculaires</li>
+                    <li>Grande finale et match pour la 3ème place</li>
+                    <li>Remise des trophées et célébration</li>
+                </ul>
+            </section>
+
+            <section id="equipes">
+                <h2>Équipes participantes</h2>
+                <p>Cette année, nous accueillons toutes les équipes talentueuses venant de toute la Côte d'Ivoire. Chaque équipe apportera son style unique, promettant des matchs passionnants et des moments de football inoubliables.</p>
+            </section>
+
+            <section id="stands">
+                <h2>Stands et Animations</h2>
+                <p>Profitez d'une expérience complète avec nos stands et animations tout au long de l'événement :</p>
+                <div class="stands">
+                    <div class="stand">
+                        <h3>Village Gastronomique</h3>
+                        <p>Découvrez les saveurs locales et internationales dans notre espace restauration.</p>
+                        <a href="#" class="stand-button">En savoir plus</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contactez-nous</h2>
+                <form class="contact-form" action="https://diamondcup.ci/contact" method="POST">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Diamond Cup. Tous droits réservés.</p>
+    </footer>
+
+    <div id="inscriptionPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Inscription à la Diamond Cup 2024</h2>
+            <form action="inscription.html" method="POST">
+                <input type="text" name="team_name" placeholder="Nom de l'équipe" required>
+                <input type="text" name="captain_name" placeholder="Nom du capitaine" required>
+                <input type="email" name="email" placeholder="Email de contact" required>
+                <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date("July 19, 2024 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        // Inscription Popup
+        const inscriptionBtn = document.getElementById("inscriptionBtn");
+        const inscriptionPopup = document.getElementById("inscriptionPopup");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        inscriptionBtn.onclick = function() {
+            inscriptionPopup.style.display = "block";
+        }
+
+        closeBtn.onclick = function() {
+            inscriptionPopup.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == inscriptionPopup) {
+                inscriptionPopup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
